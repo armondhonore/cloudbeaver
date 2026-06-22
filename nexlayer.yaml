@@ -1,0 +1,12 @@
+application:
+  name: cloudbeaver
+  pods:
+  - name: app
+    image: dbeaver/cloudbeaver:latest
+    path: /
+    servicePorts:
+    - 8978
+    volumes:
+    - name: cloudbeaver-data
+      mountPath: /opt/cloudbeaver/workspace
+      size: 5Gi
